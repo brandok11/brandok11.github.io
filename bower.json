@@ -1,0 +1,23 @@
+{
+  "name": "brandok11.github.io",
+  "homepage": "https://brandok11.github.io",
+  "authors": [
+    "Kenan Davis"
+  ],
+  "description": "",
+  "main": "index.html",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.6",
+    "font-awesome": "~4.5.0",
+    "handlebars": "~4.0.5"
+  }
+}
