@@ -1,46 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Brandon Kielbasa</title>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Brandon Kielbasa</title>
 
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="bower_components/handlebars/handlebars.min.js"></script>
+		<script src="bower_components/jquery/dist/jquery.min.js"></script>
+		<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script src="bower_components/handlebars/handlebars.min.js"></script>
 
-    <!-- custom scripts and data -->
-    <script src="data/about.js"> </script>
-    <script src="data/campaigns.js"> </script>
-    <script src="js/portfolio.js"> </script>
+		<!-- custom scripts and data -->
+		<script src="data/about.js"> </script>
+		<script src="data/campaigns.js"> </script>
+		<script src="js/portfolio.js"> </script>
 
-    <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+		<link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
 
-  </head>
-  <body>
+	</head>
+	<body>
 
-    <div class="container">
+    	<!-- A navigation menu that selects different views -->
+		<nav class='navbar navbar-default navbar-fixed-top' role='navigation'>
+			<div class='container'>
 
-      <!-- page tile -->
-      <div class="page-header">
-        <h1>Brandon Kielbasa </h1>
-      </div>    
+				<!-- collapsed -->
+				<div class='navbar-header'>
+					<button type='button' class='navbar-toggle collapsed' data-toggle='collapse' data-target='#main-navbar' aria-expanded='false'>
+						<span class='sr-only'>Toggle navigation</span>
+						<span class='icon-bar'></span>
+						<span class='icon-bar'></span>
+						<span class='icon-bar'></span>
+					</button>
+				</div>
 
-      <!-- A navigation menu that selects different views -->
-      <ul class="nav nav-bar">
-        <li role="" class="active"><a href="#" id="about" >About</a></li>
-        <li role=""><a href="#" id="campaigns" >Campaigns</a></li>
-      </ul>
-      <br/><br/>
+				<!-- uncollapsed -->
+				<div class='collapse navbar-collapse' id='main-navbar'>
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="#" id="about-tab" >About</a></li>
+						<li><a href="#" id="campaigns-tab" >Campaigns</a></li>
+					</ul>
+				</div>
 
+			</div>
+		</nav>
 
-      <!-- the content section is empty as we will fill it 
-            via javascript and templates -->
-      <div id="content"  class="container-fluid"  role="main">
-      </div>
-  </div> <!-- / container -->
+		<div class="container">
+
+			<!-- page tile -->
+			<div class="page-header">
+				<h1>Brandon Kielbasa </h1>
+			</div>    
+
+			<!-- the content section is empty as we will fill it via javascript and templates -->
+			<div id="content"  class="container-fluid"  role="main"></div>
+
+		</div> <!-- / container -->
 
 <!-- Here are our Templates -->
 

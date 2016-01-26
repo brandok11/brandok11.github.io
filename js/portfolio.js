@@ -29,7 +29,7 @@ $(document).ready(function(){
 	campaigns_template = Handlebars.compile(source);
 
 
-	$("#about").click(function () {
+	$("#about-tab").click(function () {
 		// show about page
 		showTemplate(about_template, about_data);
 		
@@ -37,10 +37,10 @@ $(document).ready(function(){
 		// first make the currently active tab inactive
 		$(".nav-bar .active").removeClass("active");
 		// then make slideshow tab active
-		$("#about").addClass("active");
+		$("#about-tab").addClass("active");
 	});
 
-	$("#campaigns").click(function () {
+	$("#campaigns-tab").click(function () {
 		// show campaigns page
 		showTemplate(campaigns_template, campaign_data);
 		
@@ -48,13 +48,11 @@ $(document).ready(function(){
 		// first make the currently active tab inactive
 		$(".nav-bar .active").removeClass("active");
 		// then make slideshow tab active
-		$("#campaigns").addClass("active");
+		$("#campaigns-tab").addClass("active");
 	});
 
 
-	// start the page by showing the albums view
-	// we do this by virtually clicking on the 
-	// albums tab
-	$("#about").click();
+	// start the page by showing about
+	$("#about-tab").click();
 
 });
