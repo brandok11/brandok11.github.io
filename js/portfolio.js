@@ -59,4 +59,30 @@ $(document).ready(function(){
 	// start the page by showing about
 	$("#about-tab").click();
 
+
+	// ghetto router
+	( function () {
+
+			var urlParams = window.location.search.substring( 1 );
+
+			var urlParams = window.location.search.substring( 1 ).split( '&' );
+			var params = {};
+
+			urlParams.forEach( function ( param ) {
+				var pair = param.split( '=' );
+				params[ pair[ 0 ]] = pair[ 1 ];
+			})
+
+			if ( !params.page ) return;
+
+			if ( params.page === 'about') {
+				$("#about-tab").click();
+			}
+
+			if ( params.page === 'campaigns') {
+				$("#campaigns-tab").click();
+			}
+
+		})();
+
 });
