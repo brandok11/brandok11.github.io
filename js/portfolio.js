@@ -32,6 +32,9 @@ $(document).ready(function(){
 	$("#about-tab").click(function () {
 		// show about page
 		showTemplate(about_template, about_data);
+
+		$("#about").show();
+		$("#campaigns").hide();
 		
 		// make the slideshow tab the active one
 		// first make the currently active tab inactive
@@ -47,6 +50,9 @@ $(document).ready(function(){
 	$("#campaigns-tab").click(function () {
 		// show campaigns page
 		showTemplate(campaigns_template, campaign_data);
+
+		$("#campaigns").show();
+		$("#about").hide();
 		
 		// make the slideshow tab the active one
 		// first make the currently active tab inactive
@@ -60,26 +66,17 @@ $(document).ready(function(){
 	$("#about-tab").click();
 
 
+
 	// ghetto router
 	( function () {
 
-			var urlParams = window.location.search.substring( 1 );
+			var urlParams = window.location.hash;
 
-			var urlParams = window.location.search.substring( 1 ).split( '&' );
-			var params = {};
-
-			urlParams.forEach( function ( param ) {
-				var pair = param.split( '=' );
-				params[ pair[ 0 ]] = pair[ 1 ];
-			})
-
-			if ( !params.page ) return;
-
-			if ( params.page === 'about') {
+			if ( urlParams === '#about') {
 				$("#about-tab").click();
 			}
 
-			if ( params.page === 'campaigns') {
+			if ( urlParams === '#campaigns') {
 				$("#campaigns-tab").click();
 			}
 
