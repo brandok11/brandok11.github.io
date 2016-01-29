@@ -50,7 +50,7 @@
 
 			<!-- page tile -->
 			<div class="page-header">
-				<h1>Brandon Kielbasa </h1>
+				<h1>Brandon Kielbasa</h1>
 			</div>    
 
 			<!-- the content section is empty as we will fill it via javascript and templates -->
@@ -64,34 +64,54 @@
 <!-- about template -->
 
 <script id="about-template" type="text/x-handlebars-template">
-  <div class="row">
+	<div class="row">
 
+		<div class="col-xs-12 col-md-8"> 
+			{{#each text}}
+		    	<p>{{{.}}}</p>
+			{{/each}}
+		</div> <!-- / col -->
 
-    <div class="col-xs-12 col-md-3"> 
-        {{ text }}
-    </div> <!-- / col -->
+		<div class="col-xs-12 col-md-4"> 
+		    <img src='images/brandon.jpg' class='img-responsive'>
+		</div> <!-- / col -->
 
-  </div> <!-- / row -->
+	</div> <!-- / row -->
 </script>
 
 <!-- campaigns template -->
 
 <script id="campaigns-template" type="text/x-handlebars-template">
-  <div class="row">
-    <!-- xs-12 : small display shows a single column (taking up 12 grid columns)-->
-    <!-- md-3 : medium and up displays use 3 grid columns per column -->
+	<h2>Campaigns</h2>
+	<div class="row">
 
-    {{#each campaigns}}
-    <div class="col-xs-12 col-md-3"> 
-     <div class="campaign-wrapper">
-        <p>{{title}}</p>
-        <p>{{desc}}</p>
-      </div>
-       
-    </div> <!-- / col -->
-    {{/each}}
+	    {{#each campaigns}}
+	    <div class="col-xs-12 col-md-8"> 
+	        <h3 id="{{ id }}">{{title}}</h3>
+	        <p>{{desc}}</p>
 
-  </div> <!-- / row -->
+	        <h4>Press coverage:</h4>
+
+	        <ul>
+	        {{#each press}}
+	        	<li>{{{.}}}</li>
+	        {{/each}}
+	        </ul>
+	       
+	    </div> <!-- / col -->
+	    {{/each}}
+
+	</div> <!-- / row -->
+</script>
+
+
+<script>
+	
+	$(".nav a").on("click", function(){
+		$(".nav").find(".active").removeClass("active");
+		$(this).parent().addClass("active");
+	});
+
 </script>
 
   </body>

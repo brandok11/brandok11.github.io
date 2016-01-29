@@ -9,7 +9,7 @@ var campaign_data = campaignData;
 // a helper function that instantiates a template
 // and displays the results in the content div
 function showTemplate(template, data){
-	var html    = template(data);
+	var html = template(data);
 	$('#content').html(html);
 }
 
@@ -22,10 +22,10 @@ $(document).ready(function(){
 	//
 	// compile all of our templates ready for use
 	//
-	var source   = $("#about-template").html();
+	var source = $("#about-template").html();
 	about_template = Handlebars.compile(source);
 	
-	source   = $("#campaigns-template").html();
+	source = $("#campaigns-template").html();
 	campaigns_template = Handlebars.compile(source);
 
 
@@ -38,6 +38,10 @@ $(document).ready(function(){
 		$(".nav-bar .active").removeClass("active");
 		// then make slideshow tab active
 		$("#about-tab").addClass("active");
+
+		$( ".highlights" ).click(function() {
+			$("#campaigns-tab").click();
+		});
 	});
 
 	$("#campaigns-tab").click(function () {
