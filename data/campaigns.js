@@ -43,7 +43,7 @@ var campaignData = {
 			]
 		},
 		{
-			title: 'Various Campaigns and Other Work',
+			title: 'Various Campaigns and Other Work stuff',
 			id: 'various',
 			desc: '',
 			press: [
