@@ -17,9 +17,9 @@ var campaignData = {
 			]
 		},
 		{
-			title: 'Real Time Enforcement (Department of Building Enforcement Reform)',
+			title: 'Stand for Tenant Safety (Department of Building Reform)',
 			id: 'real-time-enforcement',
-			desc: 'This campaign to create Real Time Enforcement is centered on the need for additional Department of Building enforcement in buildings that have extensive construction and/or harassing landlords. Real Time Enforcement would be an enforcement mechanism allowing the Department of Building to pay special attention to buildings that have either one of these conditions. Brandon has organized tenants across the Lower East Side who believe that the Department of Building needs new laws, additional enforcement, and steeper fines & penalties for dealing with these aggressive landlords.',
+			desc: 'This campaign is centered on the need for additional Department of Building enforcement in buildings that have extensive construction and/or harassing landlords. The Stand for Tenant Safety campaign is fighting to cretaing new laws and reforms within the Department of Building so this agency can better protect tenants facing either one of these conditions. Brandon has worked with and organized dozens of tenants across the Lower East Side who believe that the Department of Building needs new laws, additional enforcement, and steeper fines & penalties for dealing with these aggressive landlords.',
 			press: [
 				'<a href="http://www.metro.us/newyork/news/local/2013/03/18/residents-accuse-landlords-of-nightmare-living-conditions/" target="_blank">Residents accuse landlords of ‘nightmare’ living conditions</a> • Metro • March 2013',
 				'<a href="http://observer.com/2013/03/house-fall-down-les-tenants-sue-developer-over-dangerous-living-conditions/" target="_blank">House Fall Down: LES Tenants Sue Developer Over Dangerous Living Conditions</a> • Observer • March 2013',
